@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React Basics</title>
+</head>
+<body>
+  <div class="js-container"></div>
+  <div class="js-container2"></div>
+  <div class="js-container3"></div>
+
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+  <script type="text/babel">
+    const button = <button>Hello</button>;
+    const button1a = <button>Good Job!</button>;
+    const paragraph = <p>Hello this is a paragraph</p>;
+    const myName = <h3>Ing. Edward Junior Sierra Castellón</h3>;
+    const product = <h2>Cotton Socks</h2>;
+    const productPrice = 10;
+    const button2a = <button>Add to cart</button>;
+
+    const div = (
+      <div>
+        { button }
+        { paragraph }  
+      </div>
+    );
+
+    const exercise1a = (
+      <div>
+        { button1a }
+        My name is { myName }
+      </div>
+    );
+
+    const exercise1c = (
+      <div>
+        Product: { product }
+        Price: ${ productPrice }
+        { button2a }
+      </div>
+    );
+
+    const container = document.querySelector('.js-container');
+    const container2 = document.querySelector('.js-container2');
+    const container3 = document.querySelector('.js-container3');
+
+    ReactDOM.createRoot(container).render(div);
+    ReactDOM.createRoot(container2).render(exercise1a);
+    ReactDOM.createRoot(container3).render(exercise1c);
+  </script>
+</body>
+</html>
