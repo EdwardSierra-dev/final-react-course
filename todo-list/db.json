@@ -1,0 +1,30 @@
+{
+  "notes": [
+    {
+      "id": "1",
+      "note": "Hacer el café",
+      "completed": true
+    },
+    {
+      "id": "2",
+      "note": "Bañarme",
+      "completed": true
+    },
+    {
+      "id": "3",
+      "note": "Desayunar",
+      "completed": false
+    },
+    {
+      "id": "4",
+      "note": "Salir",
+      "completed": true
+    },
+    {
+      "note": "Cagar",
+      "completed": false,
+      "id": "Bfs1AtSF8Rk"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
