@@ -4,13 +4,21 @@ const TodoForm = ({ onAgregarNote }) => {
 
   const [textNote, setTextNote] = useState("");
 
+  // Este pedazo lo impementé yo
+  const [warningText, setWarningText] = useState("");
+
+  function handleWarning () {
+    if (textNote === "") {
+      setWarningText("La tarea no puede estár vacía");
+      console.log("La tarea no puede estár vacía");
+    } else {
+      setWarningText("Tarea agregada correctamente");
+      console.log("Tarea agregada correctamente");
+    }
+  }
+
   const handleSubmit = (event) => {
     event.preventDefault()
-
-    if (textNote === "") {
-      console.log("No se puede agregar notas vacias!")
-      return 
-    }
 
     const newNote = {
       note: textNote,
@@ -28,8 +36,8 @@ const TodoForm = ({ onAgregarNote }) => {
     .then(data => {
       onAgregarNote(data)
       setTextNote("")
+      setWarningText(warningText)
     })
-
   }
 
 //  const handleChange = (e) => {
@@ -47,7 +55,8 @@ const TodoForm = ({ onAgregarNote }) => {
           value={textNote}
           onChange={() => setTextNote(event.target.value)}
           />
-        <button type="submit">Enviar la nota</button>
+        <p>{warningText}</p>
+        <button type="submit" onClick={handleWarning}>Enviar la nota</button>
       </form>
     </div>
   )

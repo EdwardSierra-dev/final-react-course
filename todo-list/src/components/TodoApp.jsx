@@ -38,7 +38,9 @@ function TodoApp () {
       <TodoForm onAgregarNote={addNota}/>
       <ul>
         {notas.map((nota) => (
-          <li key={nota.id}>{nota.note} {nota.completed ? "✅":"❌"}</li>
+          <li key={nota.id}>{nota.note} {nota.completed ? "✅":"❌"}
+            <button>{nota.completed ? "Desmarcar" : "Completar tarea"}Completar tarea</button>
+          </li>
         ))}
       </ul>
     </>
