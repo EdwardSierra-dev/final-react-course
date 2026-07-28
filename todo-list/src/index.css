@@ -18,3 +18,7 @@ button {
   margin: 10px;
   width: 120px;
 }
+
+.button-delete-note {
+  width: 55px
+}

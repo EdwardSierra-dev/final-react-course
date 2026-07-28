@@ -7,6 +7,36 @@ function TodoApp () {
 
   const [notas, setNotas] = useState([]);
 
+// Ests parte la implementé yo
+  const deleteNota = async (id) => {
+    await fetch(`http://localhost:3000/notes/${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      }
+    });
+
+    setNotas((prev) => prev.filter((nota) => nota.id !== id));
+  }
+
+  const completarTarea = async (id, completed) => {
+    await fetch(`http://localhost:3000/notes/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        completed: !completed,
+      }),
+    });
+
+    setNotas((prev) =>
+      prev.map((nota) =>
+        nota.id === id ? { ...nota, completed: !completed } : nota
+      )
+    );
+  };
+
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -39,7 +69,13 @@ function TodoApp () {
       <ul>
         {notas.map((nota) => (
           <li key={nota.id}>{nota.note} {nota.completed ? "✅":"❌"}
-            <button>{nota.completed ? "Desmarcar" : "Completar tarea"}Completar tarea</button>
+            <button onClick={() => completarTarea(nota.id, nota.completed)}>{nota.completed ? "Desmarcar" : "Completar tarea"}</button>
+            <button 
+              className="button-delete-note"
+              onClick={() => deleteNota(nota.id)}
+            >
+              Eliminar
+            </button>
           </li>
         ))}
       </ul>

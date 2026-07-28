@@ -9,5 +9,6 @@ This repo was created to learn react watching this video https://www.youtube.com
 ### Tasks
 
 - Agregar un texto que aparezca cuando se envien las notas vacias. [✅]
-- Agregar un botón para completar las tareas. []
-- Agregar un botón para eliminar las tareas. []
+- Agregar un botón para completar las tareas. [✅]
+- Agregar un botón para eliminar las tareas. [✅]
+- Que no se agregue la tarea vacía, actualmente dice que no se puede pero la agrega. []
