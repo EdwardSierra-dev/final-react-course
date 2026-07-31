@@ -12,6 +12,7 @@
   <script src="https://unpkg.com/supersimpledev/react.js"></script>
   <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
   <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+  <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
 
   <script type="text/babel">
     const button = <button>Hello</button>;
@@ -21,6 +22,7 @@
     const product = <h2>Cotton Socks</h2>;
     const productPrice = 10;
     const button2a = <button>Add to cart</button>;
+    const shippingCost = 5;
     let productCost = 0;
 
     const products = [
@@ -54,14 +56,23 @@
       <div>
         <ul>
           {products.map((product) => (
-            <li key={product.id}>
-              {product.name} {product.price}
-              <button>Add to Cart</button>
+            <li 
+              key={product.id}>
+              {product.name} ${product.price}
+              <button onClick={() => {
+                productCost = productCost + product.price;
+                console.log(productCost);
+              }}>
+                Add to Cart
+              </button>
             </li>
           ))}
         </ul>
-        <h2></h2>
-      </div>
+          <h2>Product Costs: ${productCost}</h2>
+          <h2>Shipping Cost: ${shippingCost}</h2>
+          <h2>Total Cost: ${shippingCost + productCost}</h2>
+          <p>{dayjs().format('HH:mm:ss')}</p>
+        </div>
     );
 
     const container = document.querySelector('.js-container');
@@ -71,6 +82,10 @@
     ReactDOM.createRoot(container).render(div);
     ReactDOM.createRoot(container2).render(exercise1a);
     ReactDOM.createRoot(container3).render(exercise1c);
+
+    // puedo meter en render dentro de la funcion donde hago los calculos
+    // debo separa las dependencias o las responsabilidades
+    
   </script>
 </body>
 </html>
