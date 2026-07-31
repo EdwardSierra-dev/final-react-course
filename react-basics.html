@@ -21,6 +21,20 @@
     const product = <h2>Cotton Socks</h2>;
     const productPrice = 10;
     const button2a = <button>Add to cart</button>;
+    let productCost = 0;
+
+    const products = [
+      {
+        id: 1,
+        name: "Pack of Socks",
+        price: 10
+      },
+      {
+        id: 2,
+        name: "T-Shirt",
+        price: 8
+      }
+    ]
 
     const div = (
       <div>
@@ -38,9 +52,15 @@
 
     const exercise1c = (
       <div>
-        Product: { product }
-        Price: ${ productPrice }
-        { button2a }
+        <ul>
+          {products.map((product) => (
+            <li key={product.id}>
+              {product.name} {product.price}
+              <button>Add to Cart</button>
+            </li>
+          ))}
+        </ul>
+        <h2></h2>
       </div>
     );
 
