@@ -1,0 +1,56 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>React - Chat Bot</title>
+</head>
+<body>
+  <div class="js-container"></div>
+  <div class="js-container2"></div>
+  <div class="js-container3"></div>
+
+  <script src="https://unpkg.com/supersimpledev/react.js"></script>
+  <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+  <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+  <script src="https://unpkg.com/supersimpledev/dayjs.js"></script>
+
+  <script type="text/babel">
+    function ChatInput () {
+      return (
+        <div>
+          <input 
+            id="input"
+            placeholder="Send a message to ChatBot"
+            size="40"
+          />
+          <button>Send</button>
+        </div>
+      );
+    }
+
+    function ChatMessage () {
+      return (
+        <div>
+          Hello Chat
+          <img src="user.png" alt="user" width="50"/>
+        </div>
+      );
+    }
+
+    const app = (
+      <>
+        <h1>Lets do it</h1>
+        <ChatInput />
+        <ChatMessage />
+      </>
+    );
+
+    const container = document.querySelector('.js-container');
+    ReactDOM.createRoot(container).render(app);
+
+    // puedo meter en render dentro de la funcion donde hago los calculos
+    // debo separa las dependencias o las responsabilidades
+    
+  </script>
+</body>
+</html>

@@ -22,3 +22,5 @@ This repo was created to learn react watching this video https://www.youtube.com
 - Use dayjs().format('MMMM D') to get current date, display it in the console. [✅]
 - Insert the date in a paragraph. [✅]
 - https://youtu.be/TtPXvEcE11E?t=2408
+
+## ChatBot 03/08/2026
