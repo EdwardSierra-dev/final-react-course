@@ -27,7 +27,7 @@ This repo was created to learn react watching this video https://www.youtube.com
 
 - Create ```<App>``` that returns a paragraph "Hello, welcome to my website"
 - Add two buttons "Login", "SignUp"
-  - user a fragment to group them together.
+  - use a fragment to group them together.
   - use ```()```to write the jsx on multiple lines.
 - Add two input
   - Email and password. Add the attribute password.
