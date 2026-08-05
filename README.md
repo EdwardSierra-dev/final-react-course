@@ -16,7 +16,7 @@ This repo was created to learn react watching this video https://www.youtube.com
 ## SuperSimple Dev
 
 - Buy 1 pack of socks for $10 and 2 t-shirts for $8 each, calculate de total cost and save in a var name productCost and display in the console. [✅]
-- Continuing with the previous excersice, insert the product cost in a paragraph and display in website. []
+- Continuing with the previous excersice, insert the product cost in a paragraph and display in website. [✅]
 - Add a new variable shipping cost ($5) save as shippingCost calculate (shippingCost + productCost) and display de result in the website.[✅]
 - Add DayJS https://unpkg.com/supersimpledev/dayjs.js. [✅]
 - Use dayjs().format('MMMM D') to get current date, display it in the console. [✅]
@@ -27,7 +27,7 @@ This repo was created to learn react watching this video https://www.youtube.com
 
 - Create ```<App>``` that returns a paragraph "Hello, welcome to my website"
 - Add two buttons "Login", "SignUp"
-  - use a fragment to group them together.
+  - user a fragment to group them together.
   - use ```()```to write the jsx on multiple lines.
 - Add two input
   - Email and password. Add the attribute password.
