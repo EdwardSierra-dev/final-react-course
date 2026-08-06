@@ -25,7 +25,7 @@ This repo was created to learn react watching this video https://www.youtube.com
 
 ## ChatBot 03/08/2026
 
-- Create ```<App>``` that returns a paragraph "Hello, welcome to my website" []
+- Create ```<App>``` that returns a paragraph "Hello, welcome to my website" [✅]
 - Add two buttons "Login", "SignUp" []
   - user a fragment to group them together. []
   - use ```()```to write the jsx on multiple lines. []
